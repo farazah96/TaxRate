@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Visionet Systems, Inc. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Magento\TaxImportExport\Model\Rate\CsvImportHandler" type="TaxRates\Model\Rate\CsvImportHandler" />
+    <type name="Magento\Tax\Model\Calculation">
+        <plugin name="get_cl_attribute" type="TaxRates\Plugin\Converter"/>
+    </type>
+    <preference for="TaxRates\Api\TaxRateRepositoryInterface"
+                type="TaxRates\Repository\TaxRateRepository"/>
+    <preference for="TaxRates\Api\TaxGroupMapperInterface"
+                type="TaxRates\Mapper\TaxGroupMapper"/>
+</config>

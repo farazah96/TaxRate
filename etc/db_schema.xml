@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="tax_calculation_rate" resource="default" engine="innodb" comment="Tax Calculation Rate">
+        <column xsi:type="varchar" name="tax_group_vat" onCreate="migrateDataFrom(cl_tax_group)" nullable="true" length="100" comment="Tax Group VAT"/>
+        <column xsi:type="varchar" name="tax_group_no_vat" nullable="true" length="100" comment="Tax Group No VAT"/>
+    </table>
+</schema>

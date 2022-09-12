@@ -1,0 +1,8 @@
+{
+    "tax_calculation_rate": {
+        "column": {
+            "tax_group_vat": true,
+            "tax_group_no_vat": true
+        }
+    }
+}
